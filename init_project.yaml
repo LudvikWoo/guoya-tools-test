@@ -1,0 +1,4 @@
+dirs:
+  - tools
+files:
+  - .gitignore
