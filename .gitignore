@@ -1,4 +1,8 @@
-# pycharm                                                                                     
+# allure report
+reports/html/
+reports/xml/
+
+# pycharm
 .idea/                                                                                        
 # Byte-compiled / optimized / DLL files                                                       
 __pycache__/                                                                                  
