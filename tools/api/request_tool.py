@@ -3,8 +3,8 @@
 """
 
 import requests
-from tools import log_tool
-from tools.decorators_tool import logs
+from tools.report import log_tool
+from tools.report.decorators_tool import logs
 import time
 
 @logs

@@ -2,7 +2,7 @@
 封装Assert方法
 
 """
-from tools import log_tool
+from tools.report import log_tool
 import json
 
 

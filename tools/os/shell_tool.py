@@ -3,7 +3,7 @@
 """
 
 import subprocess
-from tools import log_tool
+from tools.report import log_tool
 
 
 def invoke(cmd):

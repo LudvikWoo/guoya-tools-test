@@ -1,16 +1,17 @@
 import allure
-from tools import log_tool
-from tools import string_tool
+from tools.report import log_tool
+from tools.data import string_tool
+
 
 # log decorator
 def logs(func):
     def _func(*args, **kwargs):
         r= func(*args, **kwargs)
         request = "-------------------request-------------" \
-                  "\n{0}\n{1}\n{2}".format(r.url,string_tool.dic_to_str(r.request.headers),r.request.body)
+                  "\n{0}\n{1}\n{2}".format(r.url, string_tool.dic_to_str(r.request.headers), r.request.body)
         log_tool.info(request)
         response = "---------------response----------------" \
-                   "\n{0}\n{1}\n{2}".format(r.status_code,string_tool.dic_to_str(r.headers),r.text)
+                   "\n{0}\n{1}\n{2}".format(r.status_code, string_tool.dic_to_str(r.headers), r.text)
         log_tool.info(response)
         allure.attach(request,'request',allure.attachment_type.TEXT)
         allure.attach(response, 'response', allure.attachment_type.TEXT)
